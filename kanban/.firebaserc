@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "kanban-479fb": {
+      "hosting": {
+        "kanban": [
+          "kanban-479fb"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "kanban-479fb"
+  }
+}

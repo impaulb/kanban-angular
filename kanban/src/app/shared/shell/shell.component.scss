@@ -3,9 +3,9 @@
 }
 
 .logo {
-  font-size: 1.2em;
   cursor: pointer;
   outline: none;
+  font-size: 1.6em;
 }
 
 .mat-drawer-side {
@@ -25,6 +25,19 @@
   position: sticky;
   top: 0;
   z-index: 1;
+}
+
+a {
+    font-weight: 700;
+}
+
+.top-btns {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+a:hover{
+    color: lightgreen;
 }
 
 .fill-space {

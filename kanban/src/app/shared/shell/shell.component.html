@@ -34,31 +34,17 @@
         <mat-icon aria-label="Sidenav Toggle Icon">menu</mat-icon>
       </button>
 
-      <span class="logo" routerLink="/">Kanban App</span>
+      <span class="logo" routerLink="/">Kanban</span>
 
       <span class="fill-space"></span>
 
       <!-- Only larger devices -->
       <div *ngIf="!(isHandset$ | async)">
-        <a mat-button routerLink="/kanban">Kanban Demo</a>
-        <a mat-button routerLink="/customers">SSR Demo</a>
-        <a mat-button routerLink="/login">Login</a>
+        <a mat-button class="top-btns" routerLink="/kanban">board</a>
+        <a mat-button class="top-btns" routerLink="/customers">demo</a>
+        <a mat-button class="top-btns" routerLink="/login">login</a>
       </div>
 
-      <button
-        mat-icon-button
-        [matMenuTriggerFor]="menu"
-        aria-label="More Options"
-      >
-        <mat-icon>more_vert</mat-icon>
-      </button>
-
-      <mat-menu #menu="matMenu">
-        <a mat-menu-item href="https://github.com/pboldyrev"> My GitHub </a>
-        <a mat-menu-item href="https://www.linkedin.com/in/paulboldyrev/">
-          My LinkedIn
-        </a>
-      </mat-menu>
     </mat-toolbar>
 
     <!-- Transclusion -->
