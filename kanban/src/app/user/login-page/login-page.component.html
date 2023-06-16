@@ -1,19 +1,42 @@
-<div class="wrapper">
-  <mat-card class="login-card" *ngIf="!(afAuth.authState | async)">
-    <mat-card-header>Hi there!</mat-card-header>
-    <mat-card-content
-      ><button mat-raised-button appGoogleSignin>
-        Login with Google
-      </button></mat-card-content
-    >
-  </mat-card>
+<div class="outter-wrapper">
+  <mat-card>
+    <div class="inner-wrapper">
+      <div *ngIf="!(afAuth.authState | async)">
+        <p class="title">Welcome back!</p>
+        <p class="subtitle">Sign in to your account with a magic link.</p>
 
-  <mat-card class="login-card" *ngIf="afAuth.authState | async as user">
-    <mat-card-header>Welcome, {{ user.email }}!</mat-card-header>
-    <mat-card-content
-      ><button mat-stroked-button (click)="afAuth.signOut()">
-        Logout
-      </button></mat-card-content
-    >
+        <mat-form-field class="email-wrapper">
+          <mat-label>Your Email</mat-label>
+          <input
+            type="email"
+            matInput
+            class="email-input"
+            placeholder="janedoe@example.com"
+          />
+        </mat-form-field>
+
+        <button class="btn" mat-raised-button>Get magic link</button>
+
+        <p class="middle-title">Or with account:</p>
+
+        <button class="btn" mat-raised-button appGoogleSignin>
+          <img width="13px" src="/assets/google-logo.svg" />Login with Google
+        </button>
+      </div>
+
+      <div *ngIf="afAuth.authState | async as user">
+        <p class="loggedin-subtitle">Logged in as:</p>
+        <p class="loggedin-title">
+          {{ user.email }}
+        </p>
+        <button
+          class="btn logout"
+          mat-stroked-button
+          (click)="afAuth.signOut()"
+        >
+          Logout
+        </button>
+      </div>
+    </div>
   </mat-card>
 </div>

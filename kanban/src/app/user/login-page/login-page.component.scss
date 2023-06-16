@@ -1,22 +1,77 @@
-button {
-  img {
-    width: 1.25em;
-  }
+.outter-wrapper {
+  margin: 50px auto;
+  max-width: 600px;
+  width: 80%;
 }
 
-:host {
-  text-align: center;
+.inner-wrapper {
+  padding: 10% 15%;
+}
+
+.btn {
+  width: 100%;
+  font-size: 1.1em;
+  font-weight: 500;
+  padding: 25px 0;
+  background-color: #242424;
 }
 
 .logout {
-  padding-top: 5em;
+  background-color: #f24c3d;
 }
 
-.login-card{
-    margin: 0 auto;
-    max-width: 600px;
+img {
+  margin-right: 5px;
 }
 
-.wrapper{
-    margin: 50px;
+.title {
+  margin: 0px 0px 5px 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 1.7em;
+  text-align: center;
+}
+
+.loggedin-subtitle {
+  margin: 0px 0px 5px 0;
+  padding: 0;
+  font-weight: 300;
+  font-size: 1.1em;
+  color: gray;
+  text-align: center;
+}
+
+.loggedin-title {
+    margin: 0px 0px 20px 0;
+    padding: 0;
+    font-weight: 500;
+    font-size: 1.4em;
+    text-align: center;
+  }
+
+.subtitle {
+  margin: 0px 0px 20px 0;
+  padding: 0;
+  font-weight: 300;
+  font-size: 0.9em;
+  text-align: center;
+  color: gray;
+}
+
+.email-wrapper {
+  width: 100%;
+}
+
+.email-input {
+  border: none;
+  border-radius: 5px;
+}
+
+.middle-title {
+  margin: 20px 0px 20px 0;
+  padding: 0;
+  font-weight: 300;
+  font-size: 0.9em;
+  text-align: center;
+  color: gray;
 }

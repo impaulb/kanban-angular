@@ -12,7 +12,7 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$kanban-primary: mat.define-palette(mat.$orange-palette);
+$kanban-primary: mat.define-palette(mat.$green-palette);
 $kanban-accent: mat.define-palette(mat.$red-palette, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
@@ -38,5 +38,5 @@ $kanban-theme: mat.define-dark-theme((
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;500;700&display=swap');
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Nunito, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Nuniot, "Helvetica Neue", sans-serif; }
 a {text-decoration: none;}
