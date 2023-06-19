@@ -1,41 +1,54 @@
 <div class="outter-wrapper">
   <mat-card>
     <div class="inner-wrapper">
+
+       <!-- User is not logged in -->
       <div *ngIf="!(afAuth.authState | async)">
-        <p class="title">Welcome back!</p>
-        <p class="subtitle">Sign in to your account with a magic link.</p>
+        <div class="large-spacer">
+          <p class="title">Welcome back!</p>
+          <p class="subtitle">Sign in to your account with a magic link.</p>
+        </div>
 
-        <mat-form-field class="email-wrapper">
-          <mat-label>Your Email</mat-label>
-          <input
-            type="email"
-            matInput
-            class="email-input"
-            placeholder="janedoe@example.com"
-          />
-        </mat-form-field>
+        <div class="large-spacer">
+          <mat-form-field class="fullwidth">
+            <mat-label>Your Email</mat-label>
+            <input type="email" matInput placeholder="jane@example.com" />
+          </mat-form-field>
 
-        <button class="btn" mat-raised-button>Get magic link</button>
+          <button class="btn fullwidth primary" mat-stroked-button>
+            Get magic link
+          </button>
 
-        <p class="middle-title">Or with account:</p>
+          <div class="small-spacer">
+            <p class="subtitle">Or with external account:</p>
+          </div>
 
-        <button class="btn" mat-raised-button appGoogleSignin>
-          <img width="13px" src="/assets/google-logo.svg" />Login with Google
-        </button>
+          <button
+            class="btn fullwidth primary"
+            mat-stroked-button
+            appGoogleSignin
+          >
+            <img src="/assets/google-logo.svg" />Login with Google
+          </button>
+        </div>
       </div>
 
+      <!-- User is logged in -->
       <div *ngIf="afAuth.authState | async as user">
-        <p class="loggedin-subtitle">Logged in as:</p>
-        <p class="loggedin-title">
-          {{ user.email }}
-        </p>
-        <button
-          class="btn logout"
-          mat-stroked-button
-          (click)="afAuth.signOut()"
-        >
-          Logout
-        </button>
+        <div class="large-spacer">
+          <p class="title">{{user.email}}</p>
+          <p class="subtitle">You are logged in as the above user.</p>
+
+          <div class="large-spacer">
+            <button
+              class="btn logout fullwidth warning"
+              mat-stroked-button
+              (click)="afAuth.signOut()"
+            >
+              Logout
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </mat-card>
