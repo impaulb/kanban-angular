@@ -1,0 +1,58 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.logo {
+  cursor: pointer;
+  outline: none;
+  font-size: 1.6em;
+}
+
+.mat-drawer-side {
+  border: none;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+a {
+    font-weight: 700;
+}
+
+.top-btns {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 0px 20px;
+}
+
+a:hover{
+    color: lightgreen;
+}
+
+.fill-space {
+  flex: 1 1 auto;
+}
+
+i {
+  font-style: normal;
+  font-size: 1.25em;
+  margin-right: 16px;
+}
+
+.avatar {
+  width: 1.75em;
+  border-radius: 50%;
+  margin: 0 10px 5px;
+}

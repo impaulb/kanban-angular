@@ -1,0 +1,55 @@
+<div class="outter-wrapper">
+  <mat-card>
+    <div class="inner-wrapper">
+
+       <!-- User is not logged in -->
+      <div *ngIf="!(afAuth.authState | async)">
+        <div class="large-spacer">
+          <p class="title">Welcome back!</p>
+          <p class="subtitle">Sign in to your account with a magic link.</p>
+        </div>
+
+        <div class="large-spacer">
+          <mat-form-field class="fullwidth">
+            <mat-label>Your Email</mat-label>
+            <input type="email" matInput placeholder="jane@example.com" />
+          </mat-form-field>
+
+          <button class="btn fullwidth primary" mat-stroked-button>
+            Get magic link
+          </button>
+
+          <div class="small-spacer">
+            <p class="subtitle">Or with external account:</p>
+          </div>
+
+          <button
+            class="btn fullwidth primary"
+            mat-stroked-button
+            appGoogleSignin
+          >
+            <img src="/assets/google-logo.svg" />Login with Google
+          </button>
+        </div>
+      </div>
+
+      <!-- User is logged in -->
+      <div *ngIf="afAuth.authState | async as user">
+        <div class="large-spacer">
+          <p class="title">{{user.email}}</p>
+          <p class="subtitle">You are logged in as the above user.</p>
+
+          <div class="large-spacer">
+            <button
+              class="btn logout fullwidth warning"
+              mat-stroked-button
+              (click)="afAuth.signOut()"
+            >
+              Logout
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+</div>

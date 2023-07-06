@@ -1,0 +1,56 @@
+.outter-wrapper {
+  margin: 5% auto;
+  max-width: 600px;
+  width: 80%;
+}
+
+.inner-wrapper {
+  padding: 0 15%;
+}
+
+.large-spacer {
+  margin: 15% 0;
+}
+
+.small-spacer {
+  margin: 15px 0; 
+}
+
+.title {
+  margin: 0px 0px 5px 0;
+  font-weight: 500;
+  font-size: 1.7em;
+  text-align: center;
+  color: white;
+}
+
+.subtitle {
+  margin: 0;
+  font-weight: 300;
+  font-size: 0.9em;
+  text-align: center;
+  color: gray;
+}
+
+.btn {
+  font-size: 1.1em;
+  font-weight: 500;
+  padding: 25px 0;
+}
+
+.primary {
+  background-color: #242424;
+}
+
+.warning {
+  background-color: #f24c3d;
+}
+
+img {
+  margin-right: 5px;
+  width: 13px;
+}
+
+.fullwidth {
+  width: 100%;
+}
